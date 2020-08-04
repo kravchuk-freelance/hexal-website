@@ -1,0 +1,88 @@
+.contact {
+    background-color: $bckgrn_black1;
+
+    &_content {
+        @extend %center_block;
+        @extend %clearfix;
+        
+        padding: 65px 20px;
+    }
+
+    &_title {
+        @include font(30px, 30px, 'MavenPro-Regular');
+        
+        color: $text_color_gray2;
+    }
+    
+    &_subtitle {
+        @include font(18px, 22px, 'MavenPro-Regular');
+        
+        color: $text_color_gray2;
+        margin-bottom: 15px;
+    }
+    
+    &_form_wrap {
+        @extend %clearfix;
+        
+        float: left;
+        width: 74.35897435897%;
+    }
+    
+    &_info {
+        float: right;
+        width: 23.0769230769%;
+    }
+
+    &_input {
+        @include font(12px, 22px, 'Lato-Regular');
+        width: 100%;
+        margin-bottom: 15px;
+        height: 40px;
+        background-color: $bckgrn_black3;
+        color: $text_color_gray3;
+        padding: 0 15px;
+    }
+    
+    &_message {
+        @include font(12px, 22px, 'Lato-Regular');
+
+        width: 100%;
+        margin-bottom: 15px;
+        height: 150px;
+        background-color: $bckgrn_black3;
+        color: $text_color_gray3;
+        padding: 15px;
+        resize: none;
+    }
+
+    &_submit {
+        float: right;
+        width: 90px;
+        height: 40px;
+        background-color: $bckgrn_green;
+        color: $text_color_gray1;
+        cursor: pointer;
+    }
+
+    &_description {
+        @include font(12px, 22px, 'Lato-Regular');
+        
+        color: $text_color_gray2;
+        margin-bottom: 35px;
+    }
+    
+}
+
+.сontact_details {
+    @include font(12px, 22px, 'Lato-Regular');
+
+    display: block;
+    color: $text_color_gray2;
+}
+
+.icon-location::before,
+.icon-phone::before,
+.icon-email::before {
+    padding-right: 12px;
+    color: $text_color_green1;
+}

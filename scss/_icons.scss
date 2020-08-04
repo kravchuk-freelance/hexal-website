@@ -1,0 +1,98 @@
+@font-face {
+	font-family: "myfont";
+	src: url('../fonts/iconsfont/myfont.eot');
+	src: url('../fonts/iconsfont/myfont.eot?#iefix') format('eot'),
+		url('../fonts/iconsfont/myfont.woff2') format('woff2'),
+		url('../fonts/iconsfont/myfont.woff') format('woff'),
+		url('../fonts/iconsfont/myfont.ttf') format('truetype'),
+		url('../fonts/iconsfont/myfont.svg#myfont') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "myfont";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == dribbble {
+		$char: "\E001";
+	}
+	@if $filename == email {
+		$char: "\E002";
+	}
+	@if $filename == facebook {
+		$char: "\E003";
+	}
+	@if $filename == google {
+		$char: "\E004";
+	}
+	@if $filename == linkedin {
+		$char: "\E005";
+	}
+	@if $filename == location {
+		$char: "\E006";
+	}
+	@if $filename == phone {
+		$char: "\E007";
+	}
+	@if $filename == pinterest {
+		$char: "\E008";
+	}
+	@if $filename == twitter {
+		$char: "\E009";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-dribbble {
+	@include icon(dribbble);
+}
+.icon-email {
+	@include icon(email);
+}
+.icon-facebook {
+	@include icon(facebook);
+}
+.icon-google {
+	@include icon(google);
+}
+.icon-linkedin {
+	@include icon(linkedin);
+}
+.icon-location {
+	@include icon(location);
+}
+.icon-phone {
+	@include icon(phone);
+}
+.icon-pinterest {
+	@include icon(pinterest);
+}
+.icon-twitter {
+	@include icon(twitter);
+}

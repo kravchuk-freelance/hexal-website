@@ -1,0 +1,13 @@
+.footer {
+    background-color: $bckgrn_black2;
+
+    .copyright {
+        @extend %center_block;
+    
+        max-width: 1020px;
+        padding: 0 40px;
+        color: $text_color_black1;
+        line-height: 40px;
+    }
+    
+}

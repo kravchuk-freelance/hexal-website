@@ -1,0 +1,58 @@
+.social {
+    @extend %clearfix;
+    
+    
+    &_list {
+        @extend %clearfix;
+        
+        float: right;
+    }
+    
+    &_item {
+        float: left;
+    }
+
+    &_link {
+        font-size: 0;
+        color: $text_color_white;
+        display: block;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        line-height: 24px;
+        
+        &::before {
+            font-size: 12px;
+        }
+
+    }
+
+}
+
+.icon {
+
+    &-facebook {
+        background-color: $facebook;
+    }
+
+    &-twitter {
+        background-color: $twitter;
+    }
+
+    &-google {
+        background-color: $google;
+    }
+    
+    &-pinterest {
+        background-color: $pinterest;
+    }
+    
+    &-linkedin {
+        background-color: $linkedin;
+    }
+    
+    &-dribbble {
+        background-color: $dribbble;
+    }
+
+}

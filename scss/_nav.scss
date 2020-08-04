@@ -1,0 +1,102 @@
+.nav {
+    position: relative;
+    background-color: $bckgrn_black1;
+    margin-bottom: 26px;
+    
+    &_list {
+        @extend %center_block;
+        
+        position: relative;
+        text-align: center;
+        padding-top: 12px;
+        font-size: 0;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 43%;
+            border-bottom: 1px solid $text_color_gray3;
+        }
+        
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            width: 43%;
+            border-bottom: 1px solid $text_color_gray3;
+        }
+
+    }
+
+    &_item {
+        position: relative;
+        display: inline-block;
+        vertical-align: bottom;
+
+        &:first-child::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -1px;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background-color: $text_color_white;
+        }
+
+        &:last-child::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -1px;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background-color: $text_color_white;
+        }
+
+        &:nth-child(3)::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 0;
+            border: 45px solid transparent;
+            border-top: 26px solid $bckgrn_black1;
+        }
+
+    }
+    
+    &_link {
+        @include font(10px, 52px, 'Lato-Bold');
+        
+        display: inline-block;
+        color: $text_color_white;
+        line-height: 52px;
+        padding: 0 13px;
+        
+        &:hover {
+            color: $text_color_green1;
+        }
+
+        &_logo:hover .nav_logo {
+            display: none;
+        }
+
+        &_logo:hover .nav_logo_hover {
+            display: block;
+        }
+
+    }
+
+    &_logo_hover {
+        display: none;
+    }
+
+}

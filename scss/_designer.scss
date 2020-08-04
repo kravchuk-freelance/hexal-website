@@ -1,0 +1,53 @@
+.designer {
+    background-color: $bckgrn_green;
+    
+    
+    &_content {
+        @extend %center_block;
+        @extend %clearfix;
+
+        padding: 65px 20px;
+    }
+
+    &_photo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        &_wrap {
+            position: relative;
+            width: 23.0769230769%;
+            height: 206px;
+            overflow: hidden;
+            float: left;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+    }
+
+    &_info {
+        float: right;
+        width: 74.35897435897%;
+    }
+
+    &_title {
+        @include font(30px, 30px, 'MavenPro-Regular');
+
+        color: $text_color_gray1;
+    }
+    
+    &_subtitle {
+        @include font(18px, 22px, 'MavenPro-Regular');
+    
+        color: $text_color_green2;
+    }
+
+    &_description {
+        @include font(12px, 22px, 'Lato-Regular');
+    
+        color: $text_color_gray1;
+        min-height: 130px;
+    }
+
+}
